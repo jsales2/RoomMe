@@ -1,0 +1,218 @@
+Test Ideas for Reg page:
+
+Test 1:
+Tests that a correct registration works
+
+fname = "john"
+lname = "doe"
+username = "JD2"
+bio = "Hi I'm John Doe!"
+email = johndoe2billion@gmail.com
+password = johndoe
+password2 = johndoe
+male: selected
+female: unselected
+gaming: checked
+organized: unchecked
+party: unchecked
+Cooking: unchecked
+gym: checked
+anime: checked
+horror: unchecked
+comedy: checked
+mn: checked
+
+(this should produce no errors and be pushed to the database. Not sure how to make that clear with a test. Perhaps check 
+if the program says "You are now registered and can log in"?)
+
+Test 2:
+Tests that the password matching checker works
+
+fname = "john"
+lname = "doe"
+username = "JD2"
+bio = "Hi I'm John Doe!"
+email = johndoe2billion@gmail.com
+password = johndoe
+password2 = johndoee
+male: selected
+female: unselected
+gaming: checked
+organized: unchecked
+party: unchecked
+Cooking: unchecked
+gym: checked
+anime: checked
+horror: unchecked
+comedy: checked
+mn: checked
+
+Test 3:
+Tests that the "Please enter all fields" if functions correctly
+
+Test 3.1: fname empty
+fname = ""
+lname = "doe"
+username = "JD2"
+bio = "Hi I'm John Doe!"
+email = johndoe2billion@gmail.com
+password = johndoe
+password2 = johndoe
+male: selected
+female: unselected
+gaming: checked
+organized: unchecked
+party: unchecked
+Cooking: unchecked
+gym: checked
+anime: checked
+horror: unchecked
+comedy: checked
+mn: checked
+
+Test 3.2: lname empty
+fname = "john"
+lname = ""
+username = "JD2"
+bio = "Hi I'm John Doe!"
+email = johndoe2billion@gmail.com
+password = johndoe
+password2 = johndoe
+male: selected
+female: unselected
+gaming: checked
+organized: unchecked
+party: unchecked
+Cooking: unchecked
+gym: checked
+anime: checked
+horror: unchecked
+comedy: checked
+mn: checked
+
+Test 3.3: email empty
+fname = "john"
+lname = "doe"
+username = "JD2"
+bio = "Hi I'm John Doe!"
+email = ""
+password = johndoe
+password2 = johndoe
+male: selected
+female: unselected
+gaming: checked
+organized: unchecked
+party: unchecked
+Cooking: unchecked
+gym: checked
+anime: checked
+horror: unchecked
+comedy: checked
+mn: checked
+
+Test 3.4: password empty
+fname = "john"
+lname = "doe"
+username = "JD2"
+bio = "Hi I'm John Doe!"
+email = johndoe2billion@gmail.com
+password = ""
+password2 = johndoe
+male: selected
+female: unselected
+gaming: checked
+organized: unchecked
+party: unchecked
+Cooking: unchecked
+gym: checked
+anime: checked
+horror: unchecked
+comedy: checked
+mn: checked
+
+Test 3.5: password2 empty
+fname = "john"
+lname = "doe"
+username = "JD2"
+bio = "Hi I'm John Doe!"
+email = johndoe2billion@gmail.com
+password = "johndoe"
+password2 = ""
+male: selected
+female: unselected
+gaming: checked
+organized: unchecked
+party: unchecked
+Cooking: unchecked
+gym: checked
+anime: checked
+horror: unchecked
+comedy: checked
+mn: checked
+
+Test 4:
+Tests that the "Password must be 6 characters or more" if functions properly.
+
+fname = "john"
+lname = "doe"
+username = "JD2"
+bio = "Hi I'm John Doe!"
+email = johndoe2billion@gmail.com
+password = johnd
+password2 = johnd
+male: selected
+female: unselected
+gaming: checked
+organized: unchecked
+party: unchecked
+Cooking: unchecked
+gym: checked
+anime: checked
+horror: unchecked
+comedy: checked
+mn: checked
+
+Test 5:
+This test makes sure the "Email already exists" error will be thrown when there are duplicate emails.
+
+fname = "john"
+lname = "doe"
+username = "JD2"
+bio = "Hi I'm John Doe!"
+email = johndoe2billion@gmail.com
+password = johndoe
+password2 = johndoe
+male: selected
+female: unselected
+gaming: checked
+organized: unchecked
+party: unchecked
+Cooking: unchecked
+gym: checked
+anime: checked
+horror: unchecked
+comedy: checked
+mn: checked
+
+and then input the same values a 2nd time to ensure that a duplicate email would be found: 
+
+fname = "john"
+lname = "doe"
+username = "JD2"
+bio = "Hi I'm John Doe!"
+email = johndoe2billion@gmail.com
+password = johndoe
+password2 = johndoe
+male: selected
+female: unselected
+gaming: checked
+organized: unchecked
+party: unchecked
+Cooking: unchecked
+gym: checked
+anime: checked
+horror: unchecked
+comedy: checked
+mn: checked
+
+This should print "Email already exists"
